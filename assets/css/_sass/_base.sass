@@ -10,3 +10,59 @@ body
 
 p
   font-size: 1.5em
+
+.grid
+  display: grid
+
+@for $i from 1 through 5
+  .c#{$i}
+    grid-template-columns: repeat($i,1fr)
+  .r#{$i}
+    grid-template-rows: repeat($i,1fr)
+  .span#{$i}
+    grid-column: 1/$i+1
+
+.center-self
+  justify-self: center
+  align-self: center
+
+.center-items
+  justify-self: center
+  align-self: center
+
+.hide
+  display: none
+
+.flex
+  display: flex
+  &.right
+    flex-direction: row-reverse
+
+.container
+  max-width: 1280px
+  margin: 0 auto
+
+.btn
+  background: $mainOne
+  width: fit-content
+  height: fit-content
+  color: white
+  padding: 5px 13px
+  border: none
+  font-size: 1.2rem
+  text-transform: uppercase
+  font-family: $font
+  box-sizing: border-box
+  display: grid
+  justify-items: center
+  align-items: center
+
+.relative
+  position: relative
+.fixed
+  position: fixed
+.absolute
+  position: absolute
+
+//.material-icons
+  @include material-icons()
