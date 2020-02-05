@@ -1,1 +1,1 @@
-- [] Service worker og offline webapp
+- [ ] Service worker og offline webapp
